@@ -1,0 +1,86 @@
+.component-left-bar-main {
+    width: 250px;
+    background: rgb(34, 51, 84);
+    height: 100vh;
+    position: static;
+    min-width: 250px;
+    overflow: auto;
+}
+@media (max-width:750px) {
+    .component-left-bar-main {
+        position: fixed;
+        z-index: 41;
+        width: 250px;
+        display: none;
+    }
+    .component-left-bar-main.activeMenu{
+        display: block;
+    }
+}
+.component-left-bar-logo {
+    padding: 20px;
+}
+
+.component-left-bar-avatar {
+    width: 68px;
+    height: 68px;
+    border-radius: 50%;
+}
+
+.component-left-bar-user-name {
+    color: white;
+}
+
+.component-left-bar-title {
+    color: white;
+    margin-left: 20px;
+}
+
+.component-left-bar-menu-item {
+    margin-left: 30px;
+    margin-right: 20px;
+    padding: 8px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.component-left-bar-menu-submenu {
+    margin-left: 40px;
+    margin-right: 20px;
+    padding: 5px;
+    border-radius: 10px;
+    cursor: pointer;
+    color: white;
+    font-family: Mukta Bold;
+    display: flex;
+    align-items: center;
+}
+
+.component-left-bar-menu-submenu-dot {
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background: #00000000;
+    margin-right: 10px;
+}
+.component-left-bar-menu-submenu:hover .component-left-bar-menu-submenu-dot{
+    display: flex;
+    background: white;
+}
+.component-left-bar-menu-item:hover,
+.component-left-bar-menu-submenu:hover {
+    background: #00000030;
+}
+
+.component-left-bar-menu-submenu:hover span {
+    display: flex;
+}
+
+.component-left-bar-menu-item div span {
+    color: white;
+}
+
+.component-left-bar-menu-item-arrow {
+    width: 25px;
+    height: 25px;
+}
