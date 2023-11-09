@@ -40,7 +40,7 @@ export default {
     function ({ addUtilities }) {
       const customUtilities = {
         ".xs-width": {
-          width: "calc(100vw - 48px)",
+          width: "calc(100vw - 32px)",
         },
         ".sm-width": {
           width: "563px",

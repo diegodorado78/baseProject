@@ -41,12 +41,17 @@ body {
   max-height: 1024px;
   margin: 0 auto;
 }
+/* style to hide input's border on focus */
+.noBorderInput:focus {
+  outline: 0 none;
+  border: 0 none;
+}
 /* Variables globales */
 :root {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
-  color-scheme: light dark;
+  /* color-scheme: light dark; */
   /* background-color: #242424; */
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -55,12 +60,9 @@ body {
   -webkit-text-size-adjust: 100%;
 }
 
-
-body {
-  margin: 0;
-  display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
+/* styles to hide scroll bar */
+::-webkit-scrollbar {
+  height: 1px;
+  width: 1px;
+  background: transparent;
 }
-

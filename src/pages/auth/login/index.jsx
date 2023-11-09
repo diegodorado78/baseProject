@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 /*Context*/
 import { AuthContext } from "../../../context/AuthContext";
 /*UI*/
-import { Card, Spacer, Button, Input, Image } from "@nextui-org/react";
+import { Card, Button, Input, Image } from "@nextui-org/react";
 /*Images*/
 import logo from "../../../assets/images/base-logo.png";
 /*Services*/
@@ -49,10 +49,11 @@ function Login() {
     });
   }
   return (
-    <div className="flex flex-col justify-center items-center min-h-screen">
+    <div className="flex flex-col justify-center items-center min-h-screen gap-4">
       <Image src={logo} width={250} />
-      <Spacer y={10} />
-      <Card className="w-[calc(100vw-32px)] max-w-[420px] p-5 mx-auto">
+      {/* Form */}
+      <Card className=" flex flex-col xs-width max-w-[420px] p-5 mx-auto gap-4">
+        {/* Email */}
         <Input
           label="Correo Electronico"
           type="email"
@@ -61,7 +62,7 @@ function Login() {
             setUser((prev) => ({ ...prev, email: e.target.value }))
           }
         />
-        <Spacer y={1} />
+        {/* Password */}
         <Input
           label="Contraseña"
           type="password"
@@ -70,7 +71,7 @@ function Login() {
             setUser((prev) => ({ ...prev, password: e.target.value }))
           }
         />
-        <Spacer y={10} />
+        {/* Submit button */}
         <Button
           variant="shadow"
           className=" w-6/12 bg-gray-800 text-white mx-auto"
@@ -79,8 +80,6 @@ function Login() {
         >
           Iniciar Sesion
         </Button>
-        <Spacer y={5} />
-
         <Link className="text-medium font-medium text-center" to="/registro">
           ¿No tienes una cuenta?{" "}
           <span className="text-sky-500 font-bold">Registrate aquí </span>

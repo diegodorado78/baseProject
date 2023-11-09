@@ -9,12 +9,12 @@ import { rootRouter } from './routes/rootRouter';
  * @returns Customized App Component.
  */
 function App() {
-// const user = {
-//   roles: [
-//     { id: 1, name: "user" },
-//   ], //changeable to use other routers
-// };
-const user=undefined
+  // const user = {
+  //   roles: [
+  //     { id: 1, name: "user" },
+  //   ], //changeable to use other routers
+  // };
+  const user = undefined;
   return (
     <div className="App">
       {user ? (
