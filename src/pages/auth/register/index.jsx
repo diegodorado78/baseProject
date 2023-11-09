@@ -148,11 +148,12 @@ function Register() {
         <Button
           onPress={handleRegister}
           variant="shadow"
-          className=" w-6/12 bg-gray-800 text-white mx-auto"
+          className=" w-6/12 bg-gray-800 text-white mx-auto "
           isLoading={data.loading}
         >
           Registrarme
         </Button>
+
         {/* Link to login */}
         <Link className="text-sm font-medium text-center" to="/login">
           ¿Ya tienes una cuenta?{" "}

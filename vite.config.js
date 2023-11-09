@@ -1,7 +1,23 @@
-import { defineConfig } from 'vite'
-import react from '@vitejs/plugin-react'
+import react from "@vitejs/plugin-react";
+import dotenv from "dotenv";
+import { defineConfig } from "vite";
+dotenv.config();
 
-// https://vitejs.dev/config/
-export default defineConfig({
-  plugins: [react()],
-})
+export default defineConfig(({ mode }) => {
+  const isProduction = mode === "production";
+  // Load environment variables based on the mode
+  const env = dotenv.config({
+    path: isProduction ? ".env.production" : ".env.development",
+  }).parsed;
+
+  return {
+    plugins: [react()],
+    define: {
+      "process.env": Object.keys(env).reduce((acc, key) => {
+        acc[key] = JSON.stringify(env[key]);
+        return acc;
+      }, {}),
+    },
+    // Other configurations...
+  };
+});
